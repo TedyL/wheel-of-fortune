@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Spinit - wheeloffortune [by tedy]</title>
+		<link href="./lib/css/spinit.css" rel="stylesheet" type="text/css">
+		<style>
+			.spin-container .spinit{
+				background-repeat: no-repeat;
+		    	background-size: 599px;
+		    	background-position: center;
+		    	height: 600px;
+		    	width: 600px;
+		    	margin: 80px auto;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="spin-container">
+			<div class="spinflapper"></div>
+			<div class="spinit" id="spinneratlas" style="background-image: url('./img/gameboard.png')">
+				<div class="" data-spinit-id="a1" data-spinit-start="0" data-spinit-end="45"></div>
+				<div class="" data-spinit-id="b2" data-spinit-start="45" data-spinit-end="90"></div>
+				<div class="" data-spinit-id="c3" data-spinit-start="90" data-spinit-end="135"></div>
+				<div class="" data-spinit-id="d4" data-spinit-start="135" data-spinit-end="180"></div>
+				<div class="" data-spinit-id="e5" data-spinit-start="180" data-spinit-end="225"></div>
+				<div class="" data-spinit-id="f6" data-spinit-start="225" data-spinit-end="270"></div>
+				<div class="" data-spinit-id="g7" data-spinit-start="270" data-spinit-end="315"></div>
+				<div class="" data-spinit-id="h8" data-spinit-start="315" data-spinit-end="360"></div>
+			</div>
+		</div>
+
+		<script src="./lib/js/jquery.js"></script>
+		<script src="./lib/js/transit.js"></script>
+		<script src="./lib/js/spinit.js"></script>
+		<script>
+			$("#spinneratlas").spinit({
+				// Default spin board value
+				startDegree: 0,
+				clockwise: true,
+				startDegree: 0,
+				turn: 7, 
+				radius: 20, // To avoid the flapper too near on the line
+				duration: 6000, // Define animation timing in mileseconds
+				transition: 'cubic-bezier(.25,0,.17,1)', // Default transition	
+			});
+			$(document).on("click", "#spinneratlas", function(){
+
+				// spinit => ("spin", "data-spinit-id", "callback");
+				$("#spinneratlas").spinit("spin", "d4", function(){
+					alert('done');
+				});
+			})
+		</script>
+	</body>
+</html>

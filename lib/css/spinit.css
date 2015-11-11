@@ -1,0 +1,15 @@
+.spinflapper{
+	height: 100px;
+	width: 20px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: -50px;
+	z-index: 1;
+}
+
+.spinit *{
+	display: none;
+	visibility: hidden;
+}
