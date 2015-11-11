@@ -64,7 +64,7 @@ $("#spinneratlas").spinit({});
 
 **To Normal Spin without server**
 ```javascript
-$("#spinneratlas").spinit("spin", "SPECIFIC THE ID HERE", function(){
+$("#spinneratlas").spinit("spin", "SPECIFIC THE data-spinit-id HERE", function(){
     alert('CALLBACK AFTER SPIN');
 });
 ```
@@ -103,7 +103,8 @@ $(document).ready(function(){
   {"EncrptionCode":"67J94945P@929994","Start":"315","End":"360"}
 ]
 ```
-**Look at start and end point, you will need to define the board start angle, end angle, and also EncrptionCode**
+**Look at start and end point, you will need to define the board start angle, end angle, and also EncrptionCode**  
+**Kindly remind : one circle only have 360 Angle**  
 
 ### **lucky spin json pattern that server need to follow**
 serverSpin will POST the url that you defined in lucky url.
@@ -112,7 +113,7 @@ serverSpin will POST the url that you defined in lucky url.
 ```
 
 ### **Advance API**
-To protect user spamming your POST API, this API have offer <keyUrl> Features.
+To avoid user spamming your POST API, this Jquery Plugin have offer <keyUrl> Features.
 
 You need to defined the URL.
 
