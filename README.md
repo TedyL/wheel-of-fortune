@@ -113,9 +113,9 @@ serverSpin will POST the url that you defined in lucky url.
 ```
 
 ### **Advance API**
-To avoid user spamming your POST API, this Jquery Plugin have offer <keyUrl> Features.
+To avoid user csrf the api, this Jquery Plugin have offer keyUrl features.
 
-You need to defined the URL.
+You need to defined the keyURL.
 
 ### **lucky key json pattern that server need to follow**
 ```json
