@@ -46,7 +46,7 @@ Include required JS and CSS.
 <link href="./lib/css/spinit.css" rel="stylesheet" type="text/css"/>
 ```
 
-**Javascript Pars**  
+**Javascript Parts**  
 Load all the javascript below the dom node
 ```javascript  
 <script src="./lib/js/jquery.js"></script>  
